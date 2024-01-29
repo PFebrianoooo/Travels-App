@@ -13,6 +13,6 @@ struct ListItems: Identifiable {
     let destination: String
     let location: String
     let infoDestination: String
-    let moreInfo: String
+    let moreInfo: URL? 
     let rating: String
 }

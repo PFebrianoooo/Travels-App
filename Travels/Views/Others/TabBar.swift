@@ -17,14 +17,14 @@ struct TabBar: View {
                 
             }
             
-            Text("Search View")
+            SearchView()
             .tabItem {
                 Image(systemName: "magnifyingglass")
                 Text("Home")
                 
             }
             
-            Text("Profile View")
+            ProfileView()
             .tabItem {
                 Image(systemName: "person.fill")
                 Text("Home")

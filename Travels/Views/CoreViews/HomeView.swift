@@ -21,15 +21,19 @@ struct HomeView: View {
                     
                     Spacer()
                     
-                    Image(systemName: "heart")
-                        .font(.title2)
-                        .fontWeight(.bold)
-                        .foregroundColor(Color.colorButtonSecondary)
-                        .frame(width: 40, height: 40)
-                        .background(
-                            Color.colorButtonPrimary
-                                .clipShape(Circle())
-                        )
+                    Button {
+                        // put an action here
+                    } label: {
+                        Image(systemName: "heart")
+                            .font(.title2)
+                            .fontWeight(.bold)
+                            .foregroundColor(Color.colorButtonSecondary)
+                            .frame(width: 40, height: 40)
+                            .background(
+                                Color.colorButtonPrimary
+                                    .clipShape(Circle())
+                            )
+                    }
                 }
                 .padding(.horizontal, 25)
                 
@@ -111,7 +115,13 @@ struct HomeView: View {
                     HStack(spacing: 15) {
                         ForEach(travelviewModel.bestLocations) { locations in
                             NavigationLink {
-                                // destinations detail views
+                                DetailView(
+                                    imageItems: locations.imageItems,
+                                    destination: locations.destination,
+                                    location: locations.location,
+                                    rating: locations.rating,
+                                    infoDestination: locations.infoDestination,
+                                    moreInfo: locations.moreInfo)
                             } label: {
                                 BestLocationsCard(
                                     image: locations.imageLogo,
