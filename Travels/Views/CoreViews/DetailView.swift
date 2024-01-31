@@ -8,13 +8,7 @@
 import SwiftUI
 
 struct DetailView: View {
-    let imageItems: [String]
-    let destination: String
-    let location: String
-    let rating: String
-    let infoDestination: String
-    let moreInfo: URL?
-    
+    let listItems: ListItems
     let mightLike: [String] = ["danauToba", "gunungBromo", "rajaAmpat", "borobudur", "pulauKomodo"]
     
     @Environment (\.dismiss) var dismiss
@@ -24,7 +18,7 @@ struct DetailView: View {
             // page tab view style
             VStack {
                 TabView {
-                    ForEach(imageItems, id: \.self) { imageItems in
+                    ForEach(listItems.imageItems, id: \.self) { imageItems in
                         Image(imageItems)
                             .resizable()
                             .scaledToFill()
@@ -58,14 +52,14 @@ struct DetailView: View {
             // detail informations
             HStack {
                 VStack (alignment: .leading){
-                    Text(destination)
+                    Text(listItems.destination.capitalized)
                         .font(.title)
                         .fontWeight(.bold)
                     
                     HStack(spacing: 0) {
                         Image(systemName: "pin.fill")
                             .font(.callout)
-                        Text(location)
+                        Text(listItems.location.capitalized)
                             .fontWeight(.light)
                     }
                     .foregroundColor(.blue)
@@ -76,7 +70,7 @@ struct DetailView: View {
                 VStack {
                   Text("Rating")
                         .font(.subheadline)
-                    Text(rating)
+                    Text(listItems.rating)
                         .fontWeight(.bold)
                         .font(.title3)
                 }
@@ -86,12 +80,12 @@ struct DetailView: View {
             
             // explaination text
             VStack(alignment: .leading, spacing: 12) {
-                Text(infoDestination)
+                Text(listItems.infoDestination)
                     .font(.subheadline)
                     .fontWeight(.light)
                 
-                if let moreInfo {
-                    Link("Read more on wikipedia", destination: moreInfo)
+                if let linkUrl = listItems.moreInfo {
+                    Link("Read more on wikipedia", destination: linkUrl)
                         .font(.subheadline)
                 }
                 
@@ -158,5 +152,12 @@ struct DetailView: View {
         .navigationBarBackButtonHidden(true)
     }
     
+}
+
+struct DetailView_Preview: PreviewProvider {
+    static var previews: some View {
+        DetailView(listItems: TravelsViewModel().bestLocations[0])
+            .environmentObject(TravelsViewModel())
+    }
 }
 

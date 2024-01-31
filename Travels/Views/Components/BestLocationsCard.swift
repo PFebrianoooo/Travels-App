@@ -8,20 +8,17 @@
 import SwiftUI
 
 struct BestLocationsCard: View {
-    let image: String
-    let name: String
-    let location: String
-    let ratingValue: String
+    let listItems: ListItems
     var body: some View {
         ZStack(alignment: .bottom) {
-            Image(image)
+            Image(listItems.imageLogo)
                 .resizable()
                 .frame(width: 200, height: 120)
                 .cornerRadius(5)
 
             HStack {
                 VStack(alignment: .leading) {
-                    Text(name)
+                    Text(listItems.destination)
                         .font(.subheadline)
                         .fontWidth(.condensed)
                         .fontWeight(.semibold)
@@ -31,7 +28,7 @@ struct BestLocationsCard: View {
                             .font(.caption)
                             .foregroundColor(.blue)
                         
-                        Text(location)
+                        Text(listItems.location)
                             .font(.system(size: 8))
                             .fontWeight(.light)
                     }
@@ -44,7 +41,7 @@ struct BestLocationsCard: View {
                         .font(.system(size: 10))
                         .fontWeight(.light)
                     
-                    Text(ratingValue)
+                    Text(listItems.rating)
                         .fontWeight(.semibold)
                 }
             }
@@ -64,6 +61,7 @@ struct BestLocationsCard: View {
 
 struct BestLocationsCard_Previews: PreviewProvider {
     static var previews: some View {
-        BestLocationsCard(image: "rajaAmpat", name: "Raja Ampat", location: "Papua, Indonesia", ratingValue: "4.5")
+        BestLocationsCard(listItems: TravelsViewModel().bestLocations[0])
+            .environmentObject(TravelsViewModel())
     }
 }

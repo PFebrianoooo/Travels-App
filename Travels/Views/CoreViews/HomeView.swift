@@ -77,10 +77,7 @@ struct HomeView: View {
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack {
                         ForEach(travelviewModel.categoriesList) { categories in
-                            CategoriesCard(
-                                iconName: categories.Image,
-                                name: categories.name
-                            )
+                            CategoriesCard(categoriesModel: categories)
                         }
                     }
                     .padding(.leading, 25)
@@ -115,27 +112,52 @@ struct HomeView: View {
                     HStack(spacing: 15) {
                         ForEach(travelviewModel.bestLocations) { locations in
                             NavigationLink {
-                                DetailView(
-                                    imageItems: locations.imageItems,
-                                    destination: locations.destination,
-                                    location: locations.location,
-                                    rating: locations.rating,
-                                    infoDestination: locations.infoDestination,
-                                    moreInfo: locations.moreInfo)
+                                DetailView(listItems: locations)
                             } label: {
-                                BestLocationsCard(
-                                    image: locations.imageLogo,
-                                    name: locations.destination,
-                                    location: locations.location,
-                                    ratingValue: locations.rating)
+                                BestLocationsCard(listItems: locations)
                             }
-                            .tint(Color.tintingColor)
+                            .tint(.tintingColor)
                         }
                     }
                     .padding(.horizontal, 25)
                 }
                 
             }
+            
+            
+            // new destinations and card
+            VStack {
+                HStack {
+                    Text("new destinations".capitalized)
+                        .font(.subheadline)
+                        .fontWeight(.semibold)
+                    
+                    Spacer()
+                    
+                    Button("View All") {
+                        
+                    }
+                    .font(.caption)
+                    .foregroundColor(Color.colorButtonPrimary)
+                }
+                .padding(.horizontal, 25)
+                .padding(.top, 10)
+                .padding(.bottom, 10)
+                
+                VStack(alignment: .center, spacing: 10) {
+                    ForEach(travelviewModel.newDestinations) { newDestinations in
+                        NavigationLink {
+                            DetailView(listItems: newDestinations)
+                        } label: {
+                            NewDestinationsCard(listItems: newDestinations)
+                        }
+                        .tint(.tintingColor)
+
+                    }
+                }
+                .padding(.horizontal, 25)
+            }
+            
         }
     }
 }

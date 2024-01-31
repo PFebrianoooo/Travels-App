@@ -8,15 +8,14 @@
 import SwiftUI
 
 struct CategoriesCard: View {
-    let iconName: String
-    let name: String
+    let categoriesModel: CategoriesModel
     var body: some View {
         Button {
             // put an actions here
         } label: {
             HStack(spacing: 5) {
-                Image(systemName: iconName)
-                Text(name.capitalized)
+                Image(systemName: categoriesModel.Image)
+                Text(categoriesModel.name.capitalized)
                     .fontDesign(.serif)
                     .fontWeight(.light)
             }
@@ -33,6 +32,7 @@ struct CategoriesCard: View {
 
 struct CategoriesCard_Previews: PreviewProvider {
     static var previews: some View {
-        CategoriesCard(iconName: "mountain.2.fill", name: "mountain")
+        CategoriesCard(categoriesModel: TravelsViewModel().categoriesList[0])
+            .environmentObject(TravelsViewModel())
     }
 }

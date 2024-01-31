@@ -54,7 +54,7 @@ class TravelsViewModel: ObservableObject {
               imageItems: ["puriBesakihDetail1", "puriBesakihDetail2", "puriBesakihDetail3"],
               destination: "Besakih Temple",
               location: "Bali, Indonesia",
-              infoDestination: "esakih Temple (Balinese: ᬧᬸᬭ​ᬩᭂᬲᬓᬶᬄ) is a pura complex in the village of Besakih on the slopes of Mount Agung in eastern Bali, Indonesia. It is the most important, largest, and holiest temple of Balinese Hinduism, and one of a series of Balinese temples. Perched nearly 1000 meters up the side of Gunung Agung, it is an extensive complex of 23 separate but related temples with the largest and most important being Pura Penataran Agung. The temple is built on six levels, terraced up the slope. The entrance is marked by a candi bentar (split gateway), and beyond it, the Kori Agung is the gateway to the second courtyard. The precise origins of the temple are unclear but its importance as a holy site almost certainly dates from prehistoric times. The stone bases of Pura Penataran Agung and several other temples resemble megalithic stepped pyramids, which date back at least 2,000 years. It was certainly used as a Hindu place of worship from 1284 when the first Javanese conquerors settled in Bali. By the 15th century, Besakih had become a state temple of the powerful Gelgel dynasty.",
+              infoDestination: "Besakih Temple (Balinese: ᬧᬸᬭ​ᬩᭂᬲᬓᬶᬄ) is a pura complex in the village of Besakih on the slopes of Mount Agung in eastern Bali, Indonesia. It is the most important, largest, and holiest temple of Balinese Hinduism, and one of a series of Balinese temples. Perched nearly 1000 meters up the side of Gunung Agung, it is an extensive complex of 23 separate but related temples with the largest and most important being Pura Penataran Agung. The temple is built on six levels, terraced up the slope. The entrance is marked by a candi bentar (split gateway), and beyond it, the Kori Agung is the gateway to the second courtyard. The precise origins of the temple are unclear but its importance as a holy site almost certainly dates from prehistoric times. The stone bases of Pura Penataran Agung and several other temples resemble megalithic stepped pyramids, which date back at least 2,000 years. It was certainly used as a Hindu place of worship from 1284 when the first Javanese conquerors settled in Bali. By the 15th century, Besakih had become a state temple of the powerful Gelgel dynasty.",
               moreInfo: URL(string: "https://en.wikipedia.org/wiki/Besakih_Temple"),
               rating: "5.0"),
     
@@ -72,15 +72,15 @@ class TravelsViewModel: ObservableObject {
               location: "Komodo Island, Indonesia",
               infoDestination: "Komodo (Indonesian: Pulau Komodo) is one of the 17,508 islands that comprise the Republic of Indonesia. It is particularly notable as the habitat of the Komodo dragon, the largest lizard on Earth, which is named after the island. Komodo Island has a surface area of 291 square kilometres, and had a human population of about 1,800 in 2020. Komodo is part of the Lesser Sunda chain of islands and forms part of the Komodo National Park. It is a popular destination for diving. Administratively, it is part of the Komodo District (which also includes Rinca Island and numerous other islands off the west coast of Flores, together with part of the western portion of Flores itself), forming part of West Manggarai Regency within the province of East Nusa Tenggara. Komodo is part of the Lesser Sunda chain of islands and forms part of the Komodo National Park. It lies between the substantially larger neighboring islands Sumbawa to the west and Flores to the east. The island's surface area covers 291 square kilometres. Komodo Island is home to the Komodo Dragon, the largest lizard on earth",
               moreInfo: URL(string: "https://en.wikipedia.org/wiki/Komodo_(island)"),
-              rating: "5.0"),
+              rating: "4.5"),
     
     ListItems(imageLogo: "wayKambas",
               imageItems: ["wayKambasDetail1", "wayKambasDetail2", "wayKambasDetail3"],
-              destination: "Way Kambas National Park",
+              destination: "Way Kambas Park",
               location: "Lampung, Indonesia",
               infoDestination: "Way Kambas National Park is a national park covering 1,300 km2 (500 sq mi) in Lampung province of southern Sumatra, Indonesia. It consists of swamp forest and lowland rain forest, mostly of secondary growth as result of extensive logging in the 1960s and 1970s. Despite decreasing populations, the park still has a few critically endangered Sumatran tigers, Sumatran elephants and Sumatran rhinoceroses. It also hosts over 400 bird species.Way Kambas National Park. Threats to the park are posed by poaching and habitat loss due to illegal logging. Conservation efforts include patrolling and the establishment of the Sumatran Rhino Sanctuary and the Elephant Conservation Centre.",
               moreInfo: URL(string: "https://en-m-wikipedia-org.translate.goog/wiki/Way_Kambas_National_Park?_x_tr_sl=en&_x_tr_tl=id&_x_tr_hl=id&_x_tr_pto=tc"),
-              rating: "5.0"),
+              rating: "4.5"),
     
     ListItems(imageLogo: "ijen",
               imageItems: ["ijenDetail1", "ijenDetail2", "ijenDetail3"],
