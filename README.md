@@ -9,6 +9,6 @@ VM = View Model \
 For student. If you want to test your knowledge to understanding Swift programming language, try to make same like my projects or any project idea to help us understanding more about swift, especially for student who want to be iOS developer. \
 Learn today for future. \
 Resources : https://drive.google.com/drive/folders/1oF9I3lVh1ZKnUf_HbSJC2oUrUioG4OKJ?usp=shar \
-Design : https://www.figma.com/file/69IX9ibf3l5dfNoDZDfEZG/Travels-App-UI?type=design&t=i1oQUHJyF4L3hbzY-6 \
+Design : https://www.figma.com/file/69IX9ibf3l5dfNoDZDfEZG/Travels-App-UI?type=design&t=i1oQUHJyF4L3hbzY-6 
 
 ![alt text](https://github.com/PFebrianoooo/Travels-App/blob/Main/Travels/Assets.xcassets/ImagesFolder/ImageLogo/coversImage.imageset/Travels.jpg?raw=true)
